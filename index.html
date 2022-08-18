@@ -16,14 +16,14 @@
     <p><strong>We work on dev branch then we merge into main branch</strong></p>
     <br>
 
-    <h3>When to work on different branch instead of main?</h3>
+    <h2>When to work on different branch instead of main?</h2>
     <ul>
         <li>When working on team so able to review code and perform pull request then merge the code into main.</li>
         <li>This will smoothen the coding process when many people are working on the same project.</li>
     </ul>
     <br>
     
-    <h3>JS Date</h3>
+    <h2>JS Date</h2>
     <p><strong>JavaScript's month starts from 0 until 11</strong></p>
     <button onclick="JSDate()">Get Date</button>
     <p id="dateDemo"></p>
@@ -41,6 +41,69 @@
     <br>
 
     <p id="ageResult"></p>
+    <br>
+
+    <h2>Errors! Try, Throw, Catch and Finally</h2>
+    <p>This is gold! Always use this to perform testing.</p>
+    <ul>
+        <li><strong>Try:</strong> Code block to run/try</li>
+        <li><strong>Throw:</strong> Define custom error message</li>
+        <li><strong>Catch:</strong> Code block to handle/display any error</li>
+        <li><strong>Finally:</strong> Code block to perform regardless of the result</li>
+    </ul>
+
+    <h3>Try, Throw, Catch and Finally Implementation</h3>
+    <p>Enter a number between 5 and 10:</p>
+    <input id="tryDemo" type="text">
+    <button type="button" onclick="tryFunction()">Test Input</button>
+    <p id="tryDemoResult"></p>
+
+    <h3>Error properties</h3>
+    <p>Error has 2 properties:</p>
+    <ul>
+        <li><strong>name:</strong> Display error name</li>
+        <li><strong>message:</strong> Display error message(string)</li>
+    </ul>
+
+    <p>Syntax error example:</p>
+    <button type="button" onclick="syntaxFunction()">Check error</button>
+    <p id="syntaxDemo"></p>
+    <br>
+
+    <h3>Classes</h3>
+    <p>+ constructor</p>
+    <br>
+    <p><strong>How to define and use Class method:</strong></p>
+
+    <button type="button" onclick="getCarAge()">Get car age</button>
+    <p id="classDemo"></p>
+    <br>
+
+    <h3>JSON!!</h3>
+    <p><strong>Very important!</strong> because API usually hold data in JSON format.</p>
+    <br>
+    <p><strong>JSON Tutorial:</strong></p>
+
+    <ol>
+        <li>Create JSON String</li>
+        <li>parse the JSON String using JSON.parse()</li>
+        <li>Use the JSON data as object + array</li>
+    </ol>
+
+    <button onclick="printJSON()">Print name from JSON string</button>
+    <p id="getJSON"></p>
+
+    <h3>Objects!</h3>
+    <p>"Object are king, if you master object, you master JavaScript!"</p>
+
+    <p><strong>Object demo:</strong></p>
+    <button onclick="createObject()">Object</button>
+    <p id="objectDemo"></p>
+    <p id="objectLoopDemo"></p>
+
+    <h3>Object with method in it(function)</h3>
+    <button onclick="objectMethod()">Object with method</button>
+    <p id="objectMethodDemo"></p>
 
 </body>
 </html>
