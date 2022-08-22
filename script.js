@@ -9,6 +9,8 @@ function JSDate() {
     document.getElementById("dateDemoSeconds").innerHTML = 'Seconds: ' + date.getSeconds(); //get Seconds
     document.getElementById("dateDemoDay").innerHTML = 'Day: ' + date.getDay(); //get Day
 }
+//NOT PRACTICAL BECAUSE DOM TAKES A LOT OF TIME TO LOAD
+//Try to minimize DOM
 
 
 function ageCheck() {
