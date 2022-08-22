@@ -119,3 +119,150 @@ objectMethod = () => {
 
     document.getElementById("objectMethodDemo").innerHTML = car.carDetails();
 }
+
+//Accessor (Getter and Setter)
+getterFunction = () => {
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "en",
+        get lang() {
+            return this.language;
+        }
+    };
+
+    document.getElementById("getterDemo").innerHTML = person.lang;
+}
+
+setterFunction = () => {
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "",
+        set lang (lang) {
+            this.language = lang;
+        }
+    };
+
+    person.lang = "en";
+    document.getElementById("setterDemo").innerHTML = person.language;
+}
+
+betterDataQuality = () => {
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "en",
+        get lang() {
+            return this.language.toUpperCase();
+        }
+    };
+
+    document.getElementById("betterDataQualityDemo").innerHTML = person.lang;
+}
+
+definePropertyFunction = () => {
+    //1. Define object
+    const obj = {
+        counter: 0
+    };
+
+    //2. Define Getter and Setter
+    Object.defineProperty(obj, "reset", {
+        get : function () {
+            this.counter = 0;
+        }
+    });
+    Object.defineProperty(obj, "increment", {
+        get : function () {
+            this.counter++;
+        }
+    });
+    Object.defineProperty(obj, "decrement", {
+        get : function () {
+            this.counter--;
+        }
+    });
+    Object.defineProperty(obj, "add", {
+        set : function (value) {
+            this.counter += value;
+        }
+    });
+    Object.defineProperty(obj, "subtract", {
+        set : function (value) {
+            this.counter -= value;
+        }
+    });
+
+    //Change the counter values:
+    obj.reset; //reset to 0
+    obj.add = 5; //add 5
+    obj.subtract = 1; //minus 1 = 4
+    obj.increment //5
+    obj.decrement //4
+
+    document.getElementById("definePropertyFunctionDemo").innerHTML = obj.counter;
+}
+
+//Constructor (Blueprint)
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.nationality = "Malaysian"; //cannot add property to constructor
+                                    //so need to hard code it
+}
+
+getConstructor = () => {
+    //create constructor
+    const father = new Person("Annuar", "Abd Ghani", 52, "black");
+    const mother = new Person("Zarani", "Hashim", 50, "black");
+
+    //Display constructor's property (person's properties) and nationality
+    document.getElementById("constructorDemo").innerHTML = 
+    "My father is " + father.firstName + " " + father.lastName + ". He is a " + father.nationality
+    + "<br>" +
+    "My mother is " + mother.firstName + " " + mother.lastName + ". She is a " + mother.nationality; 
+}
+
+getConstructorPrototype = () => {
+    //create constructor
+    const father = new Person("Annuar", "Abd Ghani", 52, "black");
+
+    //create prototype
+    Person.prototype.gender = "Male";
+    //create function prototype
+    Person.prototype.NameandGender = function() {
+        return "My father is " + this.firstName + " " + this.lastName + ". He is " + father.gender;
+    };
+
+    //Display constructor's property (person's properties) and nationality
+    document.getElementById("constructorPrototypeDemo").innerHTML = father.NameandGender();
+}
+
+homemadeIterable = () => {
+    //create object
+    myNumber = {};
+
+    //Make it iterable
+    myNumber[Symbol.iterator] = function () {
+        let n = 0;
+        done = false;
+        return {
+            next() {
+                n += 10;
+                if (n == 100) {done = true;}
+                return { value:n, done:done};
+            }
+        };
+    }
+
+    //to iterate
+    let text = ""
+    for (const num of myNumber) {
+        text += num + "<br>"
+    }
+
+    document.getElementById("homemadeIterableDemo").innerHTML = text;
+}

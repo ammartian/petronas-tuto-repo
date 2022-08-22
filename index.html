@@ -76,9 +76,8 @@
     <br>
 
     <!-- Classes -->
-    <h3>Classes</h3>
+    <h2>Classes</h2>
     <p>+ constructor</p>
-    <br>
     <p><strong>How to define and use Class method:</strong></p>
 
     <button type="button" onclick="getCarAge()">Get car age</button>
@@ -86,22 +85,23 @@
     <br>
 
     <!-- JSON -->
-    <h3>JSON!!</h3>
+    <h2>JSON!!</h3>
     <p><strong>Very important!</strong> because API usually hold data in JSON format.</p>
-    <br>
     <p><strong>JSON Tutorial:</strong></p>
 
     <ol>
         <li>Create JSON String</li>
         <li>parse the JSON String using JSON.parse()</li>
         <li>Use the JSON data as object + array</li>
+        <li>Extra: If you stringify array (stringify(arr)), it will become JSON notation</li>
     </ol>
 
     <button onclick="printJSON()">Print name from JSON string</button>
     <p id="getJSON"></p>
+    <br>
 
     <!-- Objectss -->
-    <h3>Objects!</h3>
+    <h2>Objects!</h2>
     <p>"Object are king, if you master object, you master JavaScript!"</p>
 
     <p><strong>Object demo:</strong></p>
@@ -112,6 +112,72 @@
     <h3>Object with method in it(function)</h3>
     <button onclick="objectMethod()">Object with method</button>
     <p id="objectMethodDemo"></p>
+
+    <!-- Accessor (Getter and Setter) -->
+    <h3>Accessor (Getter and Setter)</h3>
+    <p><strong>Why use getter and setter?</strong></p>
+    <ul>
+        <li>Secure better data quality</li>
+        <li>Equal syntax for properties and methods</li>
+        <li>Simpler syntax</li>
+    </ul>
+
+    <strong>Getter and Setter</strong>
+    <br>
+    <button onclick="getterFunction()">Get</button>
+    <p id="getterDemo"></p>
+
+    <button onclick="setterFunction()">Set</button>
+    <p id="setterDemo"></p>
+
+    <button onclick="betterDataQuality()">Better Data Quality</button>
+    <p id="betterDataQualityDemo"></p>
+
+    <button onclick="definePropertyFunction()">Using Object.defineProperty()</button>
+    <p id="definePropertyFunctionDemo"></p>
+
+    <!-- Constructor -->
+    <h3>Constructor (Blueprint)</h3>
+    <ul>
+        <li>Constructor act as an blueprint of an object.</li>
+        <li>Object: Person</li>
+        <li>Property of a person: first name, last name, age, eye colour, nationality</li>
+        <li>So, blueprint of person is it must have first name, last name, age eye colour and nationality</li>
+        <li>Person is father, mother, brother, etc</li>
+        <li>Notes: its a good practice to start an object name with Capital letter</li>
+    </ul>
+    
+    <button onclick="getConstructor()">Get Constructor</button>
+    <p id="constructorDemo"></p>
+
+    <strong>
+        Since we can not add a new property to an existing object constructor,
+        we use "Object.prototype"
+    </strong>
+    <br>
+
+    <button onclick="getConstructorPrototype()">Get Constructor using Prototype</button>
+    <p id="constructorPrototypeDemo"></p>
+
+    <h3>Object Iterables</h3>
+    <p>Iterable objects are objects that can be iterated over with <strong>for..of</strong>.</p>
+    <p>Objects can be iterable using <strong>for..of</strong> if its:</p>
+    <ul>
+        <li>String</li>
+        <li>Array</li>
+        <li>Sets</li>
+        <li>Maps</li>
+    </ul>
+    <p>We will face problem if we want to customer iterable.Therefore, we need to use:</p>
+    <ul>
+        <li>Symbol.iterator</li>
+        <li>next()</li>
+        <li>value</li>
+        <li>done</li>
+    </ul>
+
+    <button onclick="homemadeIterable()">Get Home Made Iterable</button>
+    <p id="homemadeIterableDemo"></p>
 
 </body>
 </html>
