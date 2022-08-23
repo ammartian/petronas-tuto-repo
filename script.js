@@ -396,3 +396,84 @@ classGetterSetter = () => {
     document.getElementById("getterSetterDemo").innerHTML =
     myBikeGS.bikename; // dont use () to call;
 }
+
+// Async
+// Callback
+simpleCallback = () => {
+
+    // nested function
+    myDisplayer = (something) => {
+        document.getElementById("simpleCallbackDemo").innerHTML = something;
+    }
+
+    myCalculator = (num1, num2, myCallback) => {
+        let sum = num1 + num2;
+        myCallback(sum);
+    }
+
+    myCalculator(5, 5, myDisplayer)
+}
+
+getTime = () => {
+
+    currTime = () => {
+        let d = new Date();
+
+        document.getElementById("getTimeDemo").innerHTML =
+        d.getHours() + ":" +
+        d.getMinutes() + ":" +
+        d.getSeconds();
+    }
+
+    setInterval(currTime, 1000); // Every 1 second
+}
+
+// Promise
+promiseCode = () => {
+    function myDisplayer(something) {
+        document.getElementById("promiseDemo").innerHTML = something;
+    }
+
+    // Check if x == 0
+    let myPromise = new Promise(function(myResolve, myReject) {
+        let x = 0; //Change here to get another results
+
+        if (x == 0) {
+            myResolve("OK"); //set myResolve and myReject
+        }else {
+            myReject("Error");
+        }
+    });
+
+    // print Promise result
+    myPromise.then(
+        function(value) {myDisplayer(value);},
+        function(error) {myDisplayer(error)}
+    );
+}
+
+// Async and Await
+asyncAwait = () => {
+    async function displayMessage() { // async here
+        let myPromise = new Promise(function(resolve) {
+            resolve("We hold onto our promises <3");
+        });
+
+        document.getElementById("asyncAwaitDemo").innerHTML = 
+        await myPromise; // await here
+    }
+
+    displayMessage();
+}
+
+// HTML DOM
+getFormValues = () => {
+    const x = document.forms["form1"];
+    let text = "";
+
+    for (let i = 0; i < x.length; i++) {
+        text += x.elements[i].value + "<br>";
+    }
+
+    document.getElementById("formValues").innerHTML = text;
+}

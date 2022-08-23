@@ -268,6 +268,64 @@
     <p>If you want to use the myCar object inside the static method, 
         you can send it as a parameter
     </p>
+    <br>
+
+    <!-- Async -->
+    <h2>Async</h2>
+    <h3>Callback</h3>
+    <p>A callback is a function passed as an argument to another function</p>
+    <p>This technique allows a function to call another function</p>
+    <p>A callback function can run after another function has finished</p>
+
+    <button onclick="simpleCallback()">Simple Callback</button>
+    <p id="simpleCallbackDemo"></p>
+
+    <!-- Async Callback -->
+    <h3>Aysnchronous Callback</h3>
+    <p>This example call the function every 1 second</p>
+
+    <button onclick="getTime()">Call function every 1 second</button>
+    <p id="getTimeDemo"></p>
+
+    <!-- Promise -->
+    <h3>Promise</h3>
+    <p>Code take some time to <strong>"Produce Code"</strong> and
+    <strong>"Consume code"</strong>. Promise link this two and give results 
+        based on its result.
+    </p>
+
+    <button onclick="promiseCode()">Promise some result</button>
+    <p id="promiseDemo"></p>
+
+    <!-- Async and Await -->
+    <h3>Async and Await</h3>
+    <p><strong>async</strong> makes a function return a Promise</p>
+    <p><strong>await</strong> makes a function wait for a Promise</p>
+
+    <button onclick="asyncAwait()">Async and Await</button> 
+    <p id="asyncAwaitDemo"></p>
+    <br>
+
+    <!-- HTML DOM -->
+    <h2>HTML DOM</h2>
+    <p><b>A way to access HTML and CSS element using JavaScript</b></p>
+
+    <!-- Change attribute -->
+    <p><b>Change attritube (image's alt)</b></p>
+    <img id="myImage" src="image1.jpg" alt="image1">
+    <button onclick="document.getElementById('myImage').alt = 'image2'">Change img's alt attribute</button>
+
+    <!-- Find element in forms -->
+    <p><b>Find Element in Forms using document.forms</b></p>
+    <form id="form1" action="">
+        First Name: <input type="text" name="fname" value="Donald"> <br>
+        Last Name: <input type="text" name="lname" value="Duck"> <br>
+        
+    </form>
+
+    <button onclick="getFormValues()">Submit</button> <!--button/input submit outside form for demo purposes-->
+    <p>Form's values:</p>
+    <p id="formValues"></p>
 
 </body>
 </html>
