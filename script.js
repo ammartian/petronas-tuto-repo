@@ -268,3 +268,131 @@ homemadeIterable = () => {
 
     document.getElementById("homemadeIterableDemo").innerHTML = text;
 }
+
+//Sets
+createSets = () => {
+    const letters = new Set(["a", "b","c"]);
+    console.log(letters)
+
+    //Add values to sets
+    letters.add("d");
+
+    //Add variables to sets
+    const d = "d";
+    letters.add(d);
+
+    //printeach value in sets
+    let text = "";
+    letters.forEach(function(value) {
+        text += value + "<br>";
+    })
+    document.getElementById("setsValue").innerHTML = text;
+
+    //print size
+    document.getElementById("setsSize").innerHTML = letters.size;
+}
+
+//Maps
+createMaps = () => {
+    const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let text = "";
+    for (const x of fruits.entries()) {
+        text += x + "<br>"; 
+    }
+
+    document.getElementById("mapsDemo").innerHTML = text;
+}
+
+// Function
+function argsFunction(a, b) {
+    return a * b;
+}
+
+objfuncArgs = () => {
+    const person = {
+        fullName: function(city, country) {
+            return this.firstName + " " + this.lastName + ", " +
+            city + ", " + country;
+        }
+    }
+
+    const father = {
+        firstName: "Annuar",
+        lastName: "Abd Ghani"
+    }
+
+    const mother = {
+        firstName: "Zarani",
+        lastName: "Hashim"
+    }
+
+    document.getElementById("objfuncArgsDemo").innerHTML = 
+    person.fullName.call(father, "Kedah", "Malaysia");
+}
+
+
+preserveThis = () => {
+    const person = {
+        firstName: "Ammar",
+        lastName: "Hakimi",
+        display: function (){
+            let x = document.getElementById("preserveThisDemo");
+            x.innerHTML = this.firstName + " " + this.lastName;
+        }
+    }
+
+    let display = person.display.bind(person);
+    setTimeout(display, 2000) // Display after 3 seconds
+}
+
+// Class Inheritance
+class Bike {
+    constructor(brand) {
+        this.bikename = brand;
+    }
+
+    ownership() {
+        return "I have a " + this.bikename;
+    }
+}
+
+class Model extends Bike {
+    constructor(brand, mod) {
+        super(brand);
+        this.model = mod
+    }
+
+    show() {
+        return this.ownership() + ", it is a " + this.model;
+    }
+}
+
+classInheritance = () => {
+    let myBike = new Model("Yamaha", "R1");
+    document.getElementById("inheritanceDemo").innerHTML = myBike.show();
+}
+
+class BikeGS {
+    constructor(brand) {
+        this._bikename = brand; // use _
+    }
+
+    get bikename() {
+        return this._bikename; // use _
+    }
+    
+    set bikename(x) {
+        this._bikename = x;
+    }
+}
+
+classGetterSetter = () => {
+    let myBikeGS = new BikeGS("Honda");
+    document.getElementById("getterSetterDemo").innerHTML =
+    myBikeGS.bikename; // dont use () to call;
+}

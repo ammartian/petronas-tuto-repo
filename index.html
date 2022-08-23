@@ -178,6 +178,90 @@
 
     <button onclick="homemadeIterable()">Get Home Made Iterable</button>
     <p id="homemadeIterableDemo"></p>
+    <br>
+
+    <!-- Sets -->
+    <h3>Sets</h3>
+    <p><strong>Sets doesnt hold key value (Maps does)</strong></p>
+    <p>Steps to create Sets:</p>
+    <ul>
+        <li>Passing an Array to new Set() constructor</li>
+        <li>Create a new Set and use add() to add values</li>
+        <li>Create a new Set and use add() to add variables</li>
+    </ul>
+
+    <button onclick="createSets()">Sets Demo</button>
+    <p id="setsValue"></p>
+    <p id="setsSize"></p>
+    <br>
+
+    <!-- Maps -->
+    <h3>Maps</h3>
+    <p><strong>Maps holds key value</strong></p>
+    <p>Steps to create Maps:</p>
+    <ul>
+        <li>Passing an Array to new Map() constructor</li>
+        <li>Create a Map and use Map.set()</li>
+    </ul>
+
+    <button onclick="createMaps()">Create Maps</button>
+    <p id="mapsDemo"></p>
+    <br>
+
+    <!-- Functions -->
+    <h2>Functions</h2>
+    <p>In JS, Functions is an object.</p>
+
+    <button onclick="document.getElementById('fxDemo').innerHTML = argsFunction(4,3);">Simple Function with Arguments</button>
+    <p id="fxDemo"></p>
+
+    <h3>Object with method(function) that has arguments.</h3>
+    <p><strong>Call()</strong></p>
+    <p>Using "call()" method for object's function that accept argument.</p>
+
+    <button onclick="objfuncArgs()">Object Function Accepts Arguments</button>
+    <p id="objfuncArgsDemo"></p>
+
+    <p><strong>Apply()</strong></p>
+    <p>"apply()" is almost the same as "call()" but it take arguments in array</p>
+    <p><strong>Useful when deals with number!</strong></p>
+
+    <p><strong>Bind()</strong></p>
+    <p>"bind()" is use to preserve "this" because <strong>when function is 
+        used as a callback, "this" is lost.
+    </strong></p>
+
+    <button onclick="preserveThis()">Preserve This (Display after 2 sec)</button>
+    <p id="preserveThisDemo"></p>
+    <br>
+
+    <!-- Class Inheritance -->
+    <h2>Class Inheritance</h2>
+    <p>Consist of:</p>
+    <ul>
+        <li>Extends</li>
+        <li>Getter and Setter</li>
+    </ul>
+
+    <p><strong>Extends</strong></p>
+    <p>Use the "extends" keyword to inherit all methods from another class.</p>
+    <p>The super() method refers to the parent class.</p>
+    <p>By calling the super() method in the constructor method, we 
+        call the parent's constructor method and gets access to the
+        parent's properties and methods.
+    </p>
+
+    <button onclick="classInheritance()">Class Inheritance (Extends)</button>
+    <p id="inheritanceDemo"></p>
+
+    <p><strong>Getter and Setters</strong></p>
+    <p>The name of the getter/setter method cannot be the same as the name of the property</p>
+    <p>Best practice is to add "_" before the property name to seperate
+        the getter/setter from the actual property.
+    </p>
+
+    <button onclick="classGetterSetter()">Class Inheritance (Getter Setter)</button>
+    <p id="getterSetterDemo"></p>
 
 </body>
 </html>
