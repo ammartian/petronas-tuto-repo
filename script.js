@@ -477,3 +477,85 @@ getFormValues = () => {
 
     document.getElementById("formValues").innerHTML = text;
 }
+
+function eventListenerFx() {
+    let p1 = 5;
+    let p2 = 7;
+
+    const message = document.getElementById("ELmessage");
+    message.innerHTML = "";
+
+    var el = document.getElementById("ELFXBtn");
+
+    try {
+        if(el){
+            el.addEventListener("click", function () {
+                calculatePs(p1, p2);
+            });
+        }
+
+        function calculatePs(a, b) {
+            document.getElementById("ELDemo").innerHTML = a * b;
+        }
+    } catch(err) {
+        message.innerHTML = "Error: " + err;
+    }
+}
+
+// JS BOM
+confirmBox = () => {
+    var txt;
+    if (confirm("Press a button!")) {
+        txt = "You pressed OK!";
+    } else {
+        txt = "You pressed Cancel!";
+    }
+
+    document.getElementById("confirmDemo").innerHTML = txt;
+}
+
+
+promptBox = () => {
+    let text;
+    let person = prompt("Please enter your name:", "Ren");
+
+    if(person == null || person == "") {
+        text = "User cancelled the prompt.";
+    } else {
+        text = "Hello " + person + "! How are you today?";
+    }
+
+    document.getElementById("promptDemo").innerHTML = text;
+}
+
+// API
+getExactLocation = () => {
+    const x = document.getElementById("getLocationDemo");
+
+    function getLocation() {
+        try {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } catch {
+            x.innerHTML = err;
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+    }
+}
+
+
+// Web Storage API
+localStorageFx = () => {
+    localStorage.setItem("name", "Ammar Hakimi");
+    document.getElementById("localStorageDemo").innerHTML = 
+    "Local stored name: " + localStorage.getItem("name");
+}
+
+sessionStorageFx = () => {
+    sessionStorage.setItem("name", "Arfah Diyanah");
+    document.getElementById("sessionStorageDemo").innerHTML = 
+    "session stored name: " + sessionStorage.getItem("name");
+}

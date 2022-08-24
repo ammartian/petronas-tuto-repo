@@ -326,6 +326,61 @@
     <button onclick="getFormValues()">Submit</button> <!--button/input submit outside form for demo purposes-->
     <p>Form's values:</p>
     <p id="formValues"></p>
+    <br>
+
+    <!-- EventListener -->
+    <h3>JS DOm EventListener</h3>
+    <p>EventListener allows to add more JS event for more functionality</p>
+
+    <button id="ELFXBtn" onclick="eventListenerFx()">Click twice to fire the EventListener</button>
+    <p id="ELDemo"></p>
+    <p id="ELmessage"></p>
+    <br>
+
+    <!-- JS BOM -->
+    <h2>JS BOM</h2>
+    <h3>Popup alert</h3>
+    <p>3 types of popup alert</p>
+    <ul>
+        <li>Alert Box</li>
+        <li>Confirm Box</li>
+        <li>Prompt Box</li>
+    </ul>
+
+    <h3>Confirm Box</h3>
+    <button onclick="confirmBox()">Confirm Box</button>
+    <p id="confirmDemo"></p>
+
+    <h3>Prompt Box</h3>
+    <button onclick="promptBox()">Prompt Box</button>
+    <p id="promptDemo"></p>
+    <br>
+
+    <!-- API -->
+    <h2>API</h2>
+    <p><b>API make our life easier because it extends the functionality of our web.</b></p>
+    <p>Types of API:</p>
+    <ul>
+        <li>Browser API: Has some built-in in web browser</li>
+        <li>Server API: Does not built in web browser</li>
+    </ul>
+
+    <h3>Browser API (Geolocation)</h3>
+    <p>This features only available on secured contexts (HTTPS)</p>
+    <button onclick="getExactLocation()">Get location</button>
+    <p id="getLocationDemo"></p>
+    <br>
+
+    <h3>LocalStorage and SessionStorage API</h3>
+    <p><b>LocalStorage</b> will keep the data forever and <b>SessionStorage</b> will
+    delete data when browser is closed.</p>
+
+    <button onclick="localStorageFx()">localStorage</button>
+    <p id="localStorageDemo"></p>
+
+    <button onclick="sessionStorageFx()">sessionStorage</button>
+    <p id="sessionStorageDemo"></p>
+
 
 </body>
 </html>
