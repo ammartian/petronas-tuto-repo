@@ -91,7 +91,7 @@
 
     <ol>
         <li>Create JSON String</li>
-        <li>parse the JSON String using JSON.parse()</li>
+        <li>JSON.parse(): Turn JSON String into JS Object</li>
         <li>Use the JSON data as object + array</li>
         <li>Extra: If you stringify array (stringify(arr)), it will become JSON notation</li>
     </ol>
@@ -380,6 +380,31 @@
 
     <button onclick="sessionStorageFx()">sessionStorage</button>
     <p id="sessionStorageDemo"></p>
+    <br>
+
+    <!-- JSON -->
+    <h2>JSON!!</h3>
+        <ol>
+            <li>Create JSON String</li>
+            <li>JSON.parse(): Turn JSON String into JS Object.</li>
+            <li>JSON.stringify(): convert object into JSON String.</li>
+            <li>Use the JSON data as object + array</li>
+            <li>Extra: If you stringify array (stringify(arr)), it will become JSON notation</li>
+        </ol>
+
+        <p>When to use <b>JSON</b> or <b>XML</b>:</p>
+        <ul>
+            <li><b>JSON:</b> Fetch JSON string and JSON.Parse the JSON string</li>
+            <li><b>XML:</b> Fetch an XML document, Use XML DOM to loop through documents and 
+                Extract values and store in variables.</li>
+        </ul>
+
+        <h3>Accessing JSON Object Literal/Values</h3>
+        <p>Accessing <b>JSON Object Literal</b> by <b>.parse()</b> and turn it into 
+            <b>JavaScript Object</b>.</p>
+
+        <button onclick="accessJSON()">Access JSON Object Values</button>
+        <p id="jsonDemo"></p>
 
 
 </body>

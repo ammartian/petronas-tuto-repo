@@ -559,3 +559,15 @@ sessionStorageFx = () => {
     document.getElementById("sessionStorageDemo").innerHTML = 
     "session stored name: " + sessionStorage.getItem("name");
 }
+
+// JSON
+accessJSON = () => {
+    // JSON String
+    const myJSON = '{"name": "John", "age":30, "car":null}';
+
+    // Parse JSON String into JS Object
+    const myObj = JSON.parse(myJSON);
+    x = myObj.name;
+    
+    document.getElementById("jsonDemo").innerHTML = x;
+}
